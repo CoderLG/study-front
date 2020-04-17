@@ -1,0 +1,13 @@
+{
+  "sateliteIp": "http://www.satellite.geovis.ai/api/v1/",
+  "sateliteAnalyncIp": "http://www.sateorbit.geovis.ai/api/v1/",
+  "facilityIp": "http://www.epzh.geovis.ai/epzh/api/",
+  "taishiIp": "http://www.realtime.geovis.ai/",
+  "loginIp": "https://192.168.6.74/", 
+  "loginIp2": "http://192.168.6.72:18080/", 
+  "subjectIp": "http://192.168.6.74:9029/api/v1/",
+  "hdcIp": "http://192.168.2.1:8099/",
+  "placenameIp":"http://www.placename.geovis.ai/api/v1/",
+  "armyIp": "http://192.168.6.72:8099/",
+  "equipmentIp": "http://192.168.6.72:8099/"
+}

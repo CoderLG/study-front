@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="resource-select.css">
+  <script src="resource-select.js"></script>
+
+</head>
+<body>
+<div id="app-2">
+  <resource-select ref="aaaa" :token="token" @ok="cc" :checkbox="false"></resource-select>
+  <button @click="show">show</button>
+  <button @click="result">result</button>
+</div>
+
+<script>
+  var app2 = new Vue({
+    el: '#app-2',
+    data: {
+      message: '页面加载于 ' + new Date().toLocaleString(),
+      token:'eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJnb25nIiwidXNlcklkIjoiNSIsIm5hbWUiOiJnb25nIiwiZXhwIjoxNTI5OTI1MDM0fQ.FTR-YC3gYhUCI4PbU7QZowjZ4EQoTItM-UiqW5MkEGFWc9JPmAJv-ta8vJnzeWPxqICjsV-G8LdX3cwn5r-LecitI52LC-mDtHtPeOJ4mv86M-b1lnvBjZTIYy2GuRVst3FDKyEOYykc6ND2Ah1Fd1rX4RkPfhypoRX7M1a-lzU',
+    },
+    methods:{
+      cc(data){
+        console.log(data);
+      },
+      show() {
+        this.$refs.aaaa.show();
+      },
+      result(){
+        console.log(this.$refs.aaaa.getCheckedPaths());
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="GEOVIS iCenter v1.1用户手册_v20181102_合并3.0yzh.docx" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>5 运维管理</title>
+<link rel="stylesheet" href="GEOVIS_iCenter_用户手册.css" type="text/css" />
+<style type="text/css">
+<!--
+A:visited { color:#954F72; }
+A:link { color:#0563C1; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5";
+</script>
+</head>
+
+<body style="text-justify-trim: punctuation;">
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<h1>5<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">运维管理</span></h1>
+<h2><a name="5_1_运维统计Dashboard">5.1<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">运维统计</span>Dashboard</a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在运维管理</span>-Dashboard<span 
+	 style="font-family: 微软雅黑, sans-serif;">页面，可以查看</span>GEOVIS iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">当前的运行状态，包含数据存储状态、系统服务状态、数据量统计、文件个数统计、服务器状态等。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l&#160;</span>&#160;<b><span style="font-family: 微软雅黑, sans-serif;">数据存储状态</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif; 
+									 color: #333333;">数据存储有正常、告警、不足三个状态，代表的含义如下：</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif; 
+									 color: #333333;">正常：剩余空间</span><span 
+	 style="font-family: Arial, sans-serif; color: #333333;">/</span><span 
+	 style="font-family: 微软雅黑, sans-serif; color: #333333;">总空间</span><span 
+	 style="font-family: Arial, sans-serif; color: #333333;">&gt;20%</span><span 
+	 style="font-family: 微软雅黑, sans-serif; color: #333333;">，剩余存储空间充足。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif; 
+									 color: #333333;">告警：剩余空间</span><span 
+	 style="font-family: Arial, sans-serif; color: #333333;">/</span><span 
+	 style="font-family: 微软雅黑, sans-serif; color: #333333;">总空间</span><span 
+	 style="font-family: Arial, sans-serif; color: #333333;">&lt;=20%</span><span 
+	 style="font-family: 微软雅黑, sans-serif; color: #333333;">，剩余存储空间不多，建议清理存储空间或增加存储设备。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif; 
+									 color: #333333;">不足：剩余空间</span><span 
+	 style="font-family: Arial, sans-serif; color: #333333;">/</span><span 
+	 style="font-family: 微软雅黑, sans-serif; color: #333333;">总空间</span><span 
+	 style="font-family: Arial, sans-serif; color: #333333;">&lt;=10%</span><span 
+	 style="font-family: 微软雅黑, sans-serif; color: #333333;">，剩余存储空间已不足，需尽快清理空间或增加存储设备，否则将影响平台正常使用。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">数据存储各参数代表的含义如下：</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">总空间：</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">所在物理空间的总存储空间。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">剩余空间：</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">所在物理空间的剩余存储空间。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">数据：</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">中用户数据所占用的存储空间。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">备份：</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">为用户自动创建的备份数据所占用的存储空间。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l&#160;</span>&#160;<b><span style="font-family: 微软雅黑, sans-serif;">系统服务状态</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">系统服务有正常、告警、异常三个状态，代表的含义如下：</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">正常：所有系统服务状态正常，没有已告警或已停止的系统服务。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">告警：已告警的系统服务大于</span>0<span 
+	 style="font-family: 微软雅黑, sans-serif;">个，但没有已停止的系统服务。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">异常：系统服务存在异常，其中停止的系统服务大于</span>0<span 
+	 style="font-family: 微软雅黑, sans-serif;">个。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l&#160;</span>&#160;<b><span style="font-family: 微软雅黑, sans-serif;">数据量统计</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">统计了影像、矢量、地形、倾斜摄影、文档、图片等各类数据所占用的存储空间及在所有数据中所占的比例。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l&#160;</span>&#160;<b><span style="font-family: 微软雅黑, sans-serif;">文件个数统计</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">统计了影像、矢量、地形、倾斜摄影、文档、图片等各类数据的文件数量。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l&#160;</span>&#160;<b><span style="font-family: 微软雅黑, sans-serif;">服务器状态</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">服务器状态包含服务器的硬件配置以及</span>CPU<span 
+	 style="font-family: 微软雅黑, sans-serif;">、内存、和存储空间的使用情况。</span></p>
+<p style="margin-left: 0px;">&#160;</p>
+<h2 style="text-indent: 0px; margin-left: 0px;"><a name="5_2_底图设置">5.2<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span style="font-family: 微软雅黑, sans-serif;">底图设置</span></a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在底图设置功能中，可以配置在高级查询中用来预览数据的二维地图和三维数字地球的底图，以及将某一底图设置为默认底图。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<b><span 
+	 style="font-family: 微软雅黑, sans-serif;">如何添加互联网地图为底图？</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入运维管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">底图设置页面，点击页面上方的添加底图按钮，在下拉菜单中选择互联网地图，弹出添加底图对话框，在对话框中选择需要添加的互联网地图，点击确定。即可将选中的互联网地图添加为底图。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<b><span 
+	 style="font-family: 微软雅黑, sans-serif;">如何添加已发布的基础服务为底图？</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入运维管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">底图设置页面，点击页面上方的添加底图按钮，在下拉菜单中选择已发布的基础服务，弹出添加底图对话框，在对话框中选择需要添加的基础服务，点击确定。即可将选中的基础服务添加为底图。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<b><span 
+	 style="font-family: 微软雅黑, sans-serif;">如何设置默认底图</span>?</b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在运维管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">底图设置页面中列出了已经添加的底图及底图的类型，点击某一底图右侧的设置默认按钮，即可将该底图设置为默认底图。在高级查询中预览数据时，将以该底图为默认底图。</span></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h2 style="text-indent: 0px; margin-left: 0px;"><a name="5_3_修改管理员密码">5.3<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span style="font-family: 微软雅黑, sans-serif;">修改管理员密码</span></a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入运维管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">修改密码页面，输入当前账号密码及两次新密码，点击提交，即可修改</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">的账号密码。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在运维管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">修改密码页面中修改的账号密码，仅用于登录</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">，不影响登录系统服务管理的账号密码。</span></p>
+<p style="margin-left: 0px;">&#160;</p>
+</body>
+</html>

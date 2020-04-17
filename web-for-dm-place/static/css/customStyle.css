@@ -1,0 +1,19 @@
+/**
+ * cesium相关样式修改
+ * @author tianfeifei
+ * @date 2019-01-14
+*/
+.cesium-viewer-timelineContainer {
+	height: 37px;
+}
+.cesium-timeline-bar {
+	height: 2.5em;
+}
+.cesium-timeline-bar {
+	background: black;
+}
+.cesium-viewer-timelineContainer {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}

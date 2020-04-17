@@ -1,0 +1,4 @@
+(function() {
+var toc =  [ { "type" : "item", "name" : "3.1.1 格网集", "url" : "3_服务管理.htm#3_1_1_格网集bc-2" }, { "type" : "item", "name" : "3.1.2 发布基础影像服务", "url" : "3_服务管理.htm#3_1_2_发布基础影像服务bc-3" }, { "type" : "item", "name" : "3.1.3 发布影像服务", "url" : "3_服务管理.htm#3_1_3_发布影像服务bc-4" }, { "type" : "item", "name" : "3.1.4 发布矢量服务", "url" : "3_服务管理.htm#3_1_4_发布矢量服务bc-5" }, { "type" : "item", "name" : "3.1.5 发布地形服务", "url" : "3_服务管理.htm#3_1_5_发布地形服务bc-6" }, { "type" : "item", "name" : "3.1.6 发布倾斜摄影服务", "url" : "3_服务管理.htm#3_1_6_发布倾斜摄影服务bc-7" } ];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

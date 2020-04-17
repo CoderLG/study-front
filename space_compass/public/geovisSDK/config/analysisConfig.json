@@ -1,0 +1,7 @@
+{
+    "intervisibilityUrl": "http://10.10.79.220:8251/spatialanalysis/ppv.json",
+    "hideUrl": "http://10.10.79.220:8251/spatialanalysis/hideVeilService.json",
+    "pathUrl": "http://10.10.79.220:8251/spatialanalysis/ShortestPathService.json",
+    "PolygonVisiableUrl": "http://10.10.79.220:8251/spatialanalysis/visibility2.json",
+    "SlopeUrl": "http://10.10.79.220:8251/spatialanalysis/slope.json"
+}

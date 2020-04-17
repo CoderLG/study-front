@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="GEOVIS iCenter v1.1用户手册_v20181102_合并3.0yzh.docx" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>4 高级查询</title>
+<link rel="stylesheet" href="GEOVIS_iCenter_用户手册.css" type="text/css" />
+<style type="text/css">
+<!--
+A:visited { color:#954F72; }
+A:link { color:#0563C1; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4";
+</script>
+</head>
+
+<body style="text-justify-trim: punctuation;">
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<h1>4<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">高级查询</span></h1>
+<h2><a name="4_1_底图配置和切换">4.1<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">底图配置和切换</span></a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">用户可以在高级查询中切换用来预览数据的底图，只需在高级查询页面点击右上方的图层按钮，选择需要使用的底图即可。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">用户选择的底图仅当次有效，下次进入高级查询时，仍会显示已设置的默认底图。想要修改默认底图，需要在运维管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">底图设置中配置，参照</span><a href="">5.2<span 
+	 style="font-family: 微软雅黑, sans-serif;">底图设置</span></a><span style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p style="margin-left: 21.0pt;">&#160;</p>
+<h2><a name="4_2_影像查询">4.2<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">影像数据查询</span></a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">查询影像数据的操作步骤如下：</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">1.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">输入要查询的关键字</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">2.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">选择要查询的数据类型：影像</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">3.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">设定查询范围，支持如下四种方式</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过输入四角经纬度来设定一个矩形的查询范围</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过选择行政区来设定查询范围，其中当国家为中国时，支持精确到省、市、县级的范围选择，其他国家仅支持以全国范围查询。</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过在底图上绘制矩形或多边形设定查询范围</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过上传一个</span>SHP<span style="font-family: 微软雅黑, sans-serif;">文件来设定查询范围</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">注意：所有与设定的查询范围相交的数据都会被查询出。</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">4.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">选择按卫星查询或按照分辨率查询。如按卫星查询，需要选择目标卫星及传感器，如按分辨率查询，需要选择最大分辨率。</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">5.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">选择产品级别</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">6.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">拖动滑块，确定云量范围。</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">7.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">选择采集时间</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">8.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">点击查询按钮。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">当以上任何参数留空时，即表示返回该参数所有值的数据。当所有参数留空时将查询出</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">中所有影像数据。</span></p>
+<p style="margin-left: 0px;">&#160;</p>
+<h2><a name="4_3_矢量查询">4.3<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">矢量数据查询</span></a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">查询矢量数据的操作步骤如下：</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">1.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">输入要查询的关键字</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">2.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">选择要查询的数据类型：矢量</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">3.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">设定查询范围，支持如下四种方式</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过输入四角经纬度来设定一个矩形的查询范围</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过选择行政区来设定查询范围，其中当国家为中国时，支持精确到省、市、县级的范围选择，其他国家仅支持以全国范围查询。</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过在底图上绘制矩形或多边形设定查询范围</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;"><span style="font-family: Wingdings;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">通过上传一个</span>SHP<span style="font-family: 微软雅黑, sans-serif;">文件来设定查询范围</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">注意：所有与设定的查询范围相交的数据都会被查询出。</span></p>
+<p style="text-indent: 3.3pt; margin-left: 0px;">4.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">点击查询按钮。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">当以上任何参数留空时，即表示返回该参数所有值的数据。当所有参数留空时将查询出</span>GEOVIS 
+ iCenter<span style="font-family: 微软雅黑, sans-serif;">中所有矢量数据。</span></p>
+<p>&#160;</p>
+<span style="font-size: 12.0pt; font-family: Calibri, sans-serif;"><br 
+	 style="clear: all;" clear="all" />
+</span> 
+<p>&#160;</p>
+</body>
+</html>

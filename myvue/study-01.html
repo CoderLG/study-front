@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>入门</title>
+
+</head>
+<body>
+	<div id="app">
+		 <span>{{message}}</span>
+
+		 <ul>
+			 <li>{{codes[0]}}</li>
+			 <li>{{codes[1]}}</li>
+			 <li>{{school.name}}</li>
+			 <li>{{school.tel}}</li>
+		 </ul>
+
+
+		<ul>
+			<li v-for="item in codes">{{item}}</li>
+		</ul>
+
+		<h1>计数器{{count}}</h1>
+		<button v-on:click="add">+</button>
+		<button v-on:click="sub">-</button>
+	</div>
+
+
+	<script  type="text/javascript" src="./js/vue.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+		  el: '#app',				//挂载点  其他的选择器（爽标签，除去body）也行
+		  data: {					//数据对象。
+		    message: 'Hello Vue!',
+			codes: ['vue','angular','js','css'],		//数组索引语法
+			school: { name:'黑马程序员', tel:123456},	 //对象点语法
+			count: 0,
+		  },
+		  methods: {
+		  	add: function(){
+		  		console.log('add++');
+		  		this.count ++ ;
+		  	},
+		  	sub: function(){
+				console.log('sub--');
+		  		this.count -- ;
+		  	}
+		  }
+		})
+
+		
+
+	</script>
+</body>
+</html>

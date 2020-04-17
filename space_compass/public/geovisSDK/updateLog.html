@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>更新日志</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            height: 50px;
+            font-size: 25px;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            padding: 20px;
+        }
+
+        ol {
+            padding: 15px 40px;
+            background: #ddd;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        a.resolve {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <header>GEOVIS SDK 更新日志</header>
+    <div class="wrapper">
+        <section>
+            <h3>2019/09/28更新说明：</h3>
+            <ol>
+                <li>
+                    <a>解决上一轮提测bug</a>
+                </li>
+                <li>
+                    <a>[Calculate]增加五个接口：getEllipsePositions、getCirclePositions、getIntersect、getUnion、getDiffer并增加相关示例：多边形交并差</a>
+                </li>
+            </ol>
+
+        </section>
+        <section>
+            <h3>2019/09/26更新说明：</h3>
+            <ol>
+                <li>
+                    <a>解决上一轮提测bug，开放分析工具接口：Analysis、HeightAnalyze、LayerSplit、ViewshedAnalyze、GroundClipping</a>
+                </li>
+                <li>
+                    <a>[Calculate]增加两个接口：pointInPolygon、pointInCircle并增加相关示例：模拟场景</a>
+                </li>
+                <li>
+                    <a>[GraphicLayer]增加一个接口：getItemsInPolygon，并增加相关示例：获取区域内标会对象</a>
+                </li>
+                <li>
+                    <a>增加多边形标绘接口[PolygonGraphic]</a>
+                </li>
+                <li>
+                    <a>[GraphicGroup]类中parseChildren方法暂时去掉，此版本不提供此方法。</a>
+                </li>
+            </ol>
+
+        </section>
+        <section>
+            <h3>2019/11/26更新说明：</h3>
+            <ol>
+                <li>
+                    <a>添加J标相关接口：点军标绘制对象JBPointGraphic、线军标绘制对象JBLineGraphic、J标配置对象JBConfig</a>
+                </li>
+                <li>
+                    <a>添加普通绘制对象：三角网绘制对象TriangleMeshGraphic，标签绘制对象PopoverGraphic，气泡绘制对象BubbleGraphic，贴地圆CircularGraphic</a>
+                </li>
+                <li>
+                    <a>[GraphicLayer]新增接口：创建图形绘制对象create，编辑图形绘制对象setEditItem，监听编辑对象变化onEditItemChange</a>
+                </li>
+                <li>
+                    <a>增加路径对象Path</a>
+                </li>
+                <li>
+                    <a>动目标相关功能添加及完善：动目标鼠标交互事件，动目标选中状态设置，动目标特效和轨迹设置
+                        动目标视角跟随设置，动目标模型设置，动目标属性修改
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+    </div>
+</body>
+
+</html>

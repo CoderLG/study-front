@@ -1,0 +1,1983 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="OriginalFile" content="GEOVIS iCenter v1.1用户手册_v20181102_合并3.0yzh.docx" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>3 服务管理</title>
+<link rel="stylesheet" href="GEOVIS_iCenter_用户手册.css" type="text/css" />
+<style type="text/css">
+<!--
+A:visited { color:#954F72; }
+A:link { color:#0563C1; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3";
+</script>
+</head>
+
+<body style="text-justify-trim: punctuation;">
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<h1>3<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务管理</span></h1>
+<h2><a name="3_1_服务发布">3.1<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务发布</span></a></h2>
+<h3><a name="3_1_1_格网集"><span style="font-weight: normal;">3.1.1&#160;&#160;</span><span 
+	 style="font-family: 微软雅黑, sans-serif;">格网集</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">格网集是</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">中发布服务过程中的一个重要参数，它明确指定了服务背</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">后的瓦片集合的具体参数。一个格网集定义了一个空间坐标系，空间范围，一系列的层级（对应不同的比例尺）和每层级的瓦片数范围（</span>x 
+ * y<span style="font-family: 微软雅黑, sans-serif;">张瓦片）。</span></p>
+<p style="margin-left: 0px;">iCenter<span style="font-family: 微软雅黑, sans-serif;">主要支持两种格网集，</span>EPSG:4326<span 
+	 style="font-family: 微软雅黑, sans-serif;">和</span>EPSG:3857<span style="font-family: 微软雅黑, sans-serif;">，这两种格网集对应的具体参数如下：</span></p>
+<p style="margin-left: 0px;">1<span style="font-family: 微软雅黑, sans-serif;">）</span>EPSG:4326</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">坐标系为</span>:EPSG:4236<span 
+	 style="font-family: 微软雅黑, sans-serif;">，即</span>WGS84<span style="font-family: 微软雅黑, sans-serif;">经纬度坐标系。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">单位为：度。每度对应</span>111319.49079327358<span 
+	 style="font-family: 微软雅黑, sans-serif;">米。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">地理范围为：</span>min_x 
+ = -180<span style="font-family: 微软雅黑, sans-serif;">，</span>min_y = -90, 
+ max_x = 180, max_y = 90.</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">瓦片尺寸：</span>256 
+ * 256</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">层级范围为：</span> 
+ 0 – 21<span style="font-family: 微软雅黑, sans-serif;">级</span></p>
+<p style="font-family: 微软雅黑, sans-serif; margin-left: 0px;">每级对应的具体参数如下表：</p>
+<p>&#160;</p>
+<table style=" border:none; border-collapse:separate; width:100%; max-width:691px;" cellspacing="0">
+	<col style="width: 10.924%;" />
+	<col style="width: 26.428%;" />
+	<col style="width: 30.848%;" />
+	<col style="width: 31.8%;" />
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: solid #000000 1.0px; 
+			 border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p><b><span 
+		 style="font-family: 微软雅黑, sans-serif;">层级</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p><b><span style="font-family: 微软雅黑, sans-serif;">像素大小</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p><b><span style="font-family: 微软雅黑, sans-serif;">比例尺</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p><b><span style="font-family: 微软雅黑, sans-serif;">瓦片数</span></b></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">0</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.703125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1:279,541,132.0143589</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2 
+		 x 1</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">1</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.3515625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 139,770,566.00717944</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4 
+		 x 2</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">2</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.17578125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 69,885,283.00358972</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>8 
+		 x 4</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">3</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.087890625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 34,942,641.50179486</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>16 
+		 x 8</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">4</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0439453125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 17,471,320.75089743</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>32 
+		 x 16</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">5</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.02197265625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 8,735,660.375448715</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>64 
+		 x 32</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">6</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.010986328125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 4,367,830.1877243575</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>128 
+		 x 64</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">7</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0054931640625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 2,183,915.0938621787</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>256 
+		 x 128</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">8</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.00274658203125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 1,091,957.5469310894</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>512 
+		 x 256</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">9</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.001373291015625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 545,978.7734655447</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1,024 
+		 x 512</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">10</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0006866455078125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 272,989.38673277234</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2,048 
+		 x 1,024</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">11</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0003433227539062</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 136,494.69336638617</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4,096 
+		 x 2,048</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">12</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0001716613769531</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 68,247.34668319309</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>8,192 
+		 x 4,096</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">13</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000858306884766</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 34,123.67334159654</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>16,384 
+		 x 8,192</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">14</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000429153442383</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 17,061.83667079827</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>32,768 
+		 x 16,384</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">15</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000214576721191</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 8,530.918335399136</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>65,536 
+		 x 32,768</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">16</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000107288360596</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 4,265.459167699568</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>131,072 
+		 x 65,536</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">17</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000053644180298</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 2,132.729583849784</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>262,144 
+		 x 131,072</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">18</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000026822090149</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 1,066.364791924892</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>524,288 
+		 x 262,144</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">19</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000013411045074</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 533.182395962446</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1,048,576 
+		 x 524,288</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">20</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000006705522537</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 266.591197981223</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2,097,152 
+		 x 1,048,576</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">21</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0000003352761269</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 133.2955989906115</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4,194,304 
+		 x 2,097,152</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p style="margin-left: 0px;">2<span style="font-family: 微软雅黑, sans-serif;">）</span> 
+ EPSG:3857</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">坐标系为</span>:EPSG:3857<span 
+	 style="font-family: 微软雅黑, sans-serif;">，即</span>web<span style="font-family: 微软雅黑, sans-serif;">墨卡托投影坐标系。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">单位为：米。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">地理范围为：</span>min_x 
+ = -20,037,508.34<span style="font-family: 微软雅黑, sans-serif;">，</span>min_y 
+ = -20,037,508.34, max_x = 20,037,508.34,&#160;&#160;max_y = 20,037,508.34.</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">瓦片尺寸：</span>256 
+ * 256</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">层级范围为：</span> 
+ 0 – 30<span style="font-family: 微软雅黑, sans-serif;">级</span></p>
+<p style="font-family: 微软雅黑, sans-serif; margin-left: 0px;">每级对应的具体参数如下表：</p>
+<p>&#160;</p>
+<table style=" border:none; border-collapse:separate; width:100%; max-width:718px;" cellspacing="0">
+	<col style="width: 10.527%;" />
+	<col style="width: 26.025%;" />
+	<col style="width: 31.112%;" />
+	<col width="232" />
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: solid #000000 1.0px; 
+			 border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p><b><span 
+		 style="font-family: 微软雅黑, sans-serif;">层级</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p><b><span style="font-family: 微软雅黑, sans-serif;">像素大小</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p><b><span style="font-family: 微软雅黑, sans-serif;">比例尺</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p><b><span style="font-family: 微软雅黑, sans-serif;">瓦片数</span></b></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">0</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>156,543.03390625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 559,082,263.9508929</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1 
+		 x 1</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">1</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>78,271.516953125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 279,541,131.97544646</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2 
+		 x 2</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">2</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>39,135.7584765625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 139,770,565.98772323</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4 
+		 x 4</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">3</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>19,567.87923828125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 69,885,282.99386162</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>8 
+		 x 8</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">4</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>9,783.939619140625</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 34,942,641.49693081</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>16 
+		 x 16</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">5</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4,891.9698095703125</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 17,471,320.748465404</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>32 
+		 x 32</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">6</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2,445.9849047851562</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 8,735,660.374232702</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>64 
+		 x 64</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">7</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1,222.9924523925781</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 4,367,830.187116351</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>128 
+		 x 128</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">8</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>611.4962261962891</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 2,183,915.0935581755</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>256 
+		 x 256</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">9</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>305.74811309814453</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 1,091,957.5467790877</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>512 
+		 x 512</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">10</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>152.87405654907226</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 545,978.7733895439</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1,024 
+		 x 1,024</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">11</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>76.43702827453613</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 272,989.38669477194</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2,048 
+		 x 2,048</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">12</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>38.218514137268066</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 136,494.69334738597</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4,096 
+		 x 4,096</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">13</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>19.109257068634033</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 68,247.34667369298</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>8,192 
+		 x 8,192</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">14</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>9.554628534317017</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 34,123.67333684649</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>16,384 
+		 x 16,384</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">15</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4.777314267158508</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 17,061.836668423246</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>32,768 
+		 x 32,768</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">16</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2.388657133579254</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 8,530.918334211623</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>65,536 
+		 x 65,536</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">17</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1.194328566789627</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 4,265.4591671058115</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>131,072 
+		 x 131,072</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">18</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.5971642833948135</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 2,132.7295835529058</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>262,144 
+		 x 262,144</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">19</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.2985821416974068</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 1,066.3647917764529</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>524,288 
+		 x 524,288</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">20</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.1492910708487034</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 533.1823958882264</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1,048,576 
+		 x 1,048,576</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">21</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0746455354243517</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 266.5911979441132</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>2,097,152 
+		 x 2,097,152</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">22</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0373227677121758</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 133.2955989720566</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>4,194,304 
+		 x 4,194,304</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">23</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0186613838560879</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 66.6477994860283</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>8,388,608 
+		 x 8,388,608</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">24</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.009330691928044</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 33.32389974301415</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>16,777,216 
+		 x 16,777,216</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">25</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.004665345964022</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 16.661949871507076</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>33,554,432 
+		 x 33,554,432</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">26</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.002332672982011</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 8.330974935753538</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>67,108,864 
+		 x 67,108,864</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">27</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0011663364910055</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 4.165487467876769</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>134,217,728 
+		 x 134,217,728</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">28</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0005831682455027</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 2.0827437339383845</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>268,435,456 
+		 x 268,435,456</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">29</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0002915841227514</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 1.0413718669691923</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>536,870,912 
+		 x 536,870,912</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p style="text-align: center;">30</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>0.0001457920613757</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p>1: 
+		 0.5206859334845961</p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;"><p 
+			 style="line-height: 11.0pt;"><span style="font-size: 10.5pt;">1,073,741,824 
+		 x 1,073,741,824</span></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3><a name="3_1_2_发布基础影像服务"><span style="font-weight: normal;">3.1.2<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布基础影像服务</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">基础影像服务通常作为应用的底图来使用。一般情况下，覆盖区域较大，数据容量也较大，为了让基础影像服务访问更快，通常会使用多级瓦片缓存技术。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">基础影像服务相比影像服务，在</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">内部能支持更多操作，比如基础影像局部更新，具体参见“基础影像服务管理”章节。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">支持发布基础影像服务的数据类型有四种：</span></p>
+<p style="margin-left: 0px;">GV MBTiles<span style="font-family: 微软雅黑, sans-serif;">：</span>MBTiles<span 
+	 style="font-family: 微软雅黑, sans-serif;">是由</span>Mapbox<span style="font-family: 微软雅黑, sans-serif;">公司制定的一种基于</span>SQLite<span 
+	 style="font-family: 微软雅黑, sans-serif;">数据库的地图瓦片存储开源标准格式，</span>GV 
+ MBTiles<span style="font-family: 微软雅黑, sans-serif;">在</span>MBTiles<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础上进行了优化改进。</span></p>
+<p style="margin-left: 0px;">GV HBase<span style="font-family: 微软雅黑, sans-serif;">：基于</span>HBase<span 
+	 style="font-family: 微软雅黑, sans-serif;">存储组织的一种自定义瓦片存储格式。</span></p>
+<p style="margin-left: 0px;">TIF<span style="font-family: 微软雅黑, sans-serif;">目录：由多个</span>TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件组成的文件目录。</span></p>
+<p style="margin-left: 0px;">TIF/IMG<span style="font-family: 微软雅黑, sans-serif;">文件：</span>.tif<span 
+	 style="font-family: 微软雅黑, sans-serif;">或</span>.img<span style="font-family: 微软雅黑, sans-serif;">格式的单个影像文件。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">以上几种类型的数据具体发布方法如下：</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务管理</span>”<span style="font-family: 微软雅黑, sans-serif;">页面点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布服务</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮，进入快速发布服务向导，服务类型选择</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础影像服务</span>”<span style="font-family: 微软雅黑, sans-serif;">，然后选择对应的数据源类型，通过向导发布即可。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">其中，选择具体的数据源类型后，就点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">选择影像数据</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮可以在服务器上选择具体要发布的数据。</span></p>
+<p style="margin-left: 0px;">1<span style="font-family: 微软雅黑, sans-serif;">）发布</span>GV 
+ MBTiles</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;GV MBTiles<span style="font-family: 微软雅黑, sans-serif;">数据的组织结构如下图所示：</span></p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;{DataDir}</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{0<span 
+	 style="font-family: 微软雅黑, sans-serif;">级目录</span>}</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tiles_x_y.sqlite</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{1<span 
+	 style="font-family: 微软雅黑, sans-serif;">级目录</span>}</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tiles_x_y.sqlite</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{N<span 
+	 style="font-family: 微软雅黑, sans-serif;">级目录</span>}</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;tiles_x_y.sqlite</p>
+<p style="margin-left: 42.0pt; text-indent: 21.0pt;">tiles_x_y+1.sqlite</p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;layer.properties</p>
+<p>&#160;</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">一份</span>GV 
+ MBTiles<span style="font-family: 微软雅黑, sans-serif;">存储了一个图层的瓦片数据，每一组</span>tiles.sqlite<span 
+	 style="font-family: 微软雅黑, sans-serif;">存储了对应层级的全部瓦片集合，每一个</span>tiles.sqlite<span 
+	 style="font-family: 微软雅黑, sans-serif;">最多存</span>500*500<span style="font-family: 微软雅黑, sans-serif;">张瓦片。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">数据目录下的</span>layer.properties<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件存了该图层瓦片的元信息，包括内容如下：</span></p>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;bounds=-180,-90,180,90</p>
+<p style="text-indent: 21.0pt;">minZoom=0</p>
+<p style="text-indent: 21.0pt;">maxZoom=12</p>
+<p style="text-indent: 21.0pt;">gridset=EPSG:4326</p>
+<p style="text-indent: 21.0pt;">mimetype=png</p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在发布向导中选择影像数据时，选中</span>{DataDir}<span 
+	 style="font-family: 微软雅黑, sans-serif;">目录发布即可。</span></p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<p style="margin-left: 0px;">2<span style="font-family: 微软雅黑, sans-serif;">）发布</span>GV 
+ HBase</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">弹出的</span><span lang="EN-US" xml:lang="EN-US">GV 
+ HBase</span><span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+					 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+					 mso-hansi-theme-font: minor-latin;">数据列表中选择要发布的数据即可。</span></p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<p style="margin-left: 0px;">3<span style="font-family: 微软雅黑, sans-serif;">）</span>TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">目录</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">直接选择存储多个</span>TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件的目录即可。注意目录内的</span>TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件不要嵌套在多级目录中。</span></p>
+<p style="margin-left: 0px;">4<span style="font-family: 微软雅黑, sans-serif;">）</span>TIF/IMG 
+ <span style="font-family: 微软雅黑, sans-serif;">文件</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">直接选择服务器上的任意</span>TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">或</span>IMG<span style="font-family: 微软雅黑, sans-serif;">格式的影像数据文件。</span></p>
+<span style="font-size: 12.0pt; font-family: Calibri, sans-serif;"><br 
+	 style="clear: all;" clear="all" />
+</span> 
+<p class="ListParagraph">&#160;</p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<h3><a name="3_1_3_发布影像服务"><span style="font-weight: normal;">3.1.3<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布影像服务</span></a></h3>
+<p style="text-align: left; margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">发布普通的影像服务需要先将影像数据</span>(TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">或</span>IMG<span style="font-family: 微软雅黑, sans-serif;">格式</span>)<span 
+	 style="font-family: 微软雅黑, sans-serif;">在</span>“<span style="font-family: 微软雅黑, sans-serif;">数据管理</span>”<span 
+	 style="font-family: 微软雅黑, sans-serif;">页面添加到</span>iCenter<span style="font-family: 微软雅黑, sans-serif;">中，然后通过点击对应数据后面的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮进行发布。</span></p>
+<p style="text-align: left; margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">首先，通过</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">从本地上传</span>”<span style="font-family: 微软雅黑, sans-serif;">或者</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">从服务器导入</span>”<span style="font-family: 微软雅黑, sans-serif;">将想发布的影像数据（</span>TIF<span 
+	 style="font-family: 微软雅黑, sans-serif;">或者</span>IMG<span style="font-family: 微软雅黑, sans-serif;">格式）添加到</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">的</span>“<span style="font-family: 微软雅黑, sans-serif;">数据管理</span>”<span 
+	 style="font-family: 微软雅黑, sans-serif;">页面中，具体步骤参见</span>2.2<span style="font-family: 微软雅黑, sans-serif;">，</span>2.3<span 
+	 style="font-family: 微软雅黑, sans-serif;">节。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">然后，在</span>‘’<span 
+	 style="font-family: 微软雅黑, sans-serif;">数据管理</span>‘’<span style="font-family: 微软雅黑, sans-serif;">页面找到添加成功的数据，点击对应的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮，进入服务发布向导。点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">下一步</span>”<span style="font-family: 微软雅黑, sans-serif;">，使用默认参数或者指定想发布的参数，点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布</span>”<span style="font-family: 微软雅黑, sans-serif;">，即可发布成功。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">发布过程中可以设置的参数如下：</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">瓦片格式：</span>PNG<span 
+	 style="font-family: 微软雅黑, sans-serif;">或者</span>JPEG<span style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">格网集：</span>EPSG<span 
+	 style="font-family: 微软雅黑, sans-serif;">：</span>4326 <span style="font-family: 微软雅黑, sans-serif;">或者</span> 
+ EPSG<span style="font-family: 微软雅黑, sans-serif;">：</span>3857<span style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">层级范围：层级的可选范围与格网集有关，具体参见</span>3.1.1<span 
+	 style="font-family: 微软雅黑, sans-serif;">节。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">透明色：指定某种颜色为透明色，方便处理白边等情况。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">立即切片：是否发布服务后立即切片。</span> 
+ <span style="font-family: 微软雅黑, sans-serif;">默认选择否，可以发布后根据需要手动再切。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">发布成功后，可以在</span>”<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务管理</span>”<span style="font-family: 微软雅黑, sans-serif;">对应的影像图层页面，通过指定名称找到该服务，进行服务预览和地址查看。</span></p>
+<p style="margin-left: 0px;">&#160;</p>
+<span style="font-size: 12.0pt; font-family: Calibri, sans-serif;"><br 
+	 style="clear: all;" clear="all" />
+</span> 
+<p style="text-align: left;">&#160;</p>
+<h3><a name="3_1_4_发布矢量服务"><span style="font-weight: normal;">3.1.4<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布矢量服务</span></a></h3>
+<p style="text-align: left; margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">发布矢量服务需要先将矢量数据</span>(zip<span 
+	 style="font-family: 微软雅黑, sans-serif;">包形式的</span>shapefile<span style="font-family: 微软雅黑, sans-serif;">数据</span>)<span 
+	 style="font-family: 微软雅黑, sans-serif;">在</span>“<span style="font-family: 微软雅黑, sans-serif;">数据管理</span>”<span 
+	 style="font-family: 微软雅黑, sans-serif;">页面添加到</span>iCenter<span style="font-family: 微软雅黑, sans-serif;">中，然后通过点击对应数据后面的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮进行发布。</span></p>
+<p style="text-align: left; margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">首先，通过</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">从本地上传</span>”<span style="font-family: 微软雅黑, sans-serif;">或者</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">从服务器导入</span>”<span style="font-family: 微软雅黑, sans-serif;">将想发布的矢量数据（</span>zip<span 
+	 style="font-family: 微软雅黑, sans-serif;">包形式的</span>shapefile<span style="font-family: 微软雅黑, sans-serif;">数据</span>)<span 
+	 style="font-family: 微软雅黑, sans-serif;">）添加到</span>iCenter<span style="font-family: 微软雅黑, sans-serif;">的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">数据管理</span>”<span style="font-family: 微软雅黑, sans-serif;">页面中，具体步骤参见</span>2.2<span 
+	 style="font-family: 微软雅黑, sans-serif;">，</span>2.3<span style="font-family: 微软雅黑, sans-serif;">节。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">然后，在</span>‘’<span 
+	 style="font-family: 微软雅黑, sans-serif;">数据管理</span>‘’<span style="font-family: 微软雅黑, sans-serif;">页面找到添加成功的数据，点击对应的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮，进入服务发布向导。点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">下一步</span>”<span style="font-family: 微软雅黑, sans-serif;">，使用默认参数或者指定想发布的参数，点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布</span>”<span style="font-family: 微软雅黑, sans-serif;">，即可发布成功。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">发布过程中可以设置的参数如下：</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">服务名称：指定发布的服务的名称。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">字符编码：</span>UTF-8, 
+ GBK<span style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">样式表：选择矢量数据使用的样式</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">瓦片格式：</span>PNG<span 
+	 style="font-family: 微软雅黑, sans-serif;">或者</span>JPEG<span style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">格网集：</span>EPSG<span 
+	 style="font-family: 微软雅黑, sans-serif;">：</span>4326 <span style="font-family: 微软雅黑, sans-serif;">或者</span> 
+ EPSG<span style="font-family: 微软雅黑, sans-serif;">：</span>3857<span style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">层级范围：层级的可选范围与格网集有关，具体参见</span>3.1.1<span 
+	 style="font-family: 微软雅黑, sans-serif;">节。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">立即切片：是否发布服务后立即切片。</span> 
+ <span style="font-family: 微软雅黑, sans-serif;">默认选择否，可以发布后根据需要手动再切。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">发布成功后，可以在</span>”<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务管理</span>”<span style="font-family: 微软雅黑, sans-serif;">对应的矢量图层页面，通过指定名称找到该服务，进行服务预览和地址查看。</span></p>
+<p style="margin-left: 21.0pt;">&#160;</p>
+<h3><a name="3_1_5_发布地形服务"><span style="font-weight: normal;">3.1.5<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布地形服务</span></a></h3>
+<p class="MsoNormal" style="margin-left: 0px;"><span lang="EN-US" xml:lang="EN-US">iCenter</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">支持发布的地形数据主要是</span><span lang="EN-US" 
+	 xml:lang="EN-US">CESIUM</span><span style="font-family: 微软雅黑, sans-serif; 
+										 mso-ascii-font-family: Calibri; 
+										 mso-ascii-theme-font: minor-latin; 
+										 mso-hansi-font-family: Calibri; 
+										 mso-hansi-theme-font: minor-latin;">的</span><span 
+	 lang="EN-US" xml:lang="EN-US">Terrain</span><span style="font-family: 微软雅黑, sans-serif; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-hansi-font-family: Calibri; 
+														 mso-hansi-theme-font: minor-latin;">格式，具体包括</span><span 
+	 lang="EN-US" xml:lang="EN-US">heightmap</span><span style="font-family: 微软雅黑, sans-serif; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-hansi-font-family: Calibri; 
+														 mso-hansi-theme-font: minor-latin;">和</span><span 
+	 lang="EN-US" xml:lang="EN-US">quantized-mesh</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">，通过</span><span 
+	 lang="EN-US" xml:lang="EN-US">“</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">服务管理</span><span 
+	 lang="EN-US" xml:lang="EN-US">”</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">页面的</span><span 
+	 lang="EN-US" xml:lang="EN-US">“</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">发布服务</span><span 
+	 lang="EN-US" xml:lang="EN-US">”</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">按钮进入发布服务向导进行发布。</span></p>
+<p class="MsoNormal" style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">发布服务向导目前只支持</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles</span><span style="font-family: 微软雅黑, sans-serif; 
+															 mso-ascii-font-family: Calibri; 
+															 mso-ascii-theme-font: minor-latin; 
+															 mso-hansi-font-family: Calibri; 
+															 mso-hansi-theme-font: minor-latin;">形式的</span><span 
+	 lang="EN-US" xml:lang="EN-US">Terrain</span><span style="font-family: 微软雅黑, sans-serif; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-hansi-font-family: Calibri; 
+														 mso-hansi-theme-font: minor-latin;">数据。这种格式的数据需要通过数据处理服务由</span><span 
+	 lang="EN-US" xml:lang="EN-US">Tif</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">格式的数据来生成。</span></p>
+<p class="MsoNormal" style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">下面举例说明如何将一个地形文件</span><span 
+	 lang="EN-US" xml:lang="EN-US">dem.tif</span><span style="font-family: 微软雅黑, sans-serif; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-hansi-font-family: Calibri; 
+														 mso-hansi-theme-font: minor-latin;">发布为地形服务，共两个步骤。</span></p>
+<p class="MsoNormal"><span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+							 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+							 mso-hansi-theme-font: minor-latin;">第一步</span><span 
+	 lang="EN-US" xml:lang="EN-US">:</span> <span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">将</span><span 
+	 lang="EN-US" xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">格式的地形数据处理为</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles(Terrain)</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">格式</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">1.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">进入服务管理</span><span lang="EN-US" 
+															 xml:lang="EN-US">-</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">数据处理，点击新建任务；</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">2.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">数据类型选择</span><span lang="EN-US" 
+															 xml:lang="EN-US">”</span> 
+ <span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+		 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+		 mso-hansi-theme-font: minor-latin;">地形数据</span><span lang="EN-US" 
+	 xml:lang="EN-US">”</span><span style="font-family: 微软雅黑, sans-serif; 
+									 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+									 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">，数据源选择</span><span 
+	 lang="EN-US" xml:lang="EN-US">” TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">文件</span><span 
+	 lang="EN-US" xml:lang="EN-US">”</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">，瓦片存储选择“</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles(Terrain)</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">”</span><span 
+	 lang="EN-US" xml:lang="EN-US">;</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">3.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击选择数据，从服务器上选择地形数据文件</span><span 
+	 lang="EN-US" xml:lang="EN-US">” dem.tif”;</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">4.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击存放位置，设置数据处理完成后的存放位置；</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">5.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击下一步设置参数，输入任务名称，其他参数使用默认值即可，</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">6.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击创建任务完成创建。</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">7.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">在数据处理列表中可以看到刚刚创建的任务，等待任务完成后，转到服务发布页面。</span></p>
+<p class="MsoNormal"><span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+							 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+							 mso-hansi-theme-font: minor-latin;">第二步：将处理好的</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles(Terrain)</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">格式的地形数据发布为地形服务</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">1.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">进入服务管理</span><span lang="EN-US" 
+															 xml:lang="EN-US">-</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">图层管理</span><span lang="EN-US" 
+															 xml:lang="EN-US">-</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">地形，点击发布服务；</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">2.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">服务类型选择“地形服务”，数据源选择“</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles(Terrain)</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">”</span><span 
+	 lang="EN-US" xml:lang="EN-US">;</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">3.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击选择数据，从服务器上选择第一步中处理完成的数据。</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">4.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击下一步设置参数，使用默认值即可。</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-list: Ignore;">5.&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击发布服务，服务发布完成。</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;">&#160;</p>
+<h3><a name="3_1_6_发布倾斜摄影服务"><span style="font-weight: normal;">3.1.6</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">发布倾斜摄影服务</span></a></h3>
+<p class="MsoNormal" style="margin-left: 0px;"><span lang="EN-US" xml:lang="EN-US"><span 
+	 style="font-family: 微软雅黑, sans-serif;">G</span>EOVIS iCenter</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">支持发布</span><span lang="EN-US" 
+															 xml:lang="EN-US">OSGB</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">和</span><span lang="EN-US" xml:lang="EN-US">Cesium 
+ 3DTiles</span><span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+					 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+					 mso-hansi-theme-font: minor-latin;">格式的倾斜摄影数据，通过“服务管理”页面的“发布服务”按钮进入发布服务向导来进行发布。</span></p>
+<p class="MsoListParagraph" style="margin-left: 21.0pt; text-indent: -21.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="font-family: Wingdings; mso-fareast-font-family: Wingdings; 
+	 mso-bidi-font-family: Wingdings;"><span style="mso-list: Ignore;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">如何发布</span><span lang="EN-US" 
+															 xml:lang="EN-US">3DTiles</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">格式的倾斜摄影数据？</span></p>
+<p class="MsoListParagraph" style="margin-left: 36px;"><span style="font-family: 微软雅黑, sans-serif; 
+															 mso-ascii-font-family: Calibri; 
+															 mso-ascii-theme-font: minor-latin; 
+															 mso-hansi-font-family: Calibri; 
+															 mso-hansi-theme-font: minor-latin;">操作步骤如下：</span></p>
+<p class="MsoListParagraph" style="margin-left: 57.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">1.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">进入服务管理</span><span lang="EN-US" 
+															 xml:lang="EN-US">-</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">图层管理</span><span lang="EN-US" 
+															 xml:lang="EN-US">-</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">倾斜摄影页面，点击发布服务。</span></p>
+<p class="MsoListParagraph" style="margin-left: 57.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">2.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">服务类型选择“倾斜摄影服务”，数据源选择“</span><span 
+	 lang="EN-US" xml:lang="EN-US">3DTiles</span><span style="font-family: 微软雅黑, sans-serif; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-hansi-font-family: Calibri; 
+														 mso-hansi-theme-font: minor-latin;">”</span></p>
+<p class="MsoListParagraph" style="margin-left: 57.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">3.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击选择数据，从服务器上选择</span><span lang="EN-US" 
+	 xml:lang="EN-US">3DTiles</span><span style="font-family: 微软雅黑, sans-serif; 
+											 mso-ascii-font-family: Calibri; 
+											 mso-ascii-theme-font: minor-latin; 
+											 mso-hansi-font-family: Calibri; 
+											 mso-hansi-theme-font: minor-latin;">格式的倾斜摄影数据；</span></p>
+<p class="MsoListParagraph" style="margin-left: 57.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">4.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击下一步设置参数，输入图层名称，其他参数使用默认值即可；</span></p>
+<p class="MsoListParagraph" style="margin-left: 57.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo2;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">5.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击发布服务，服务发布完成。</span></p>
+<p class="MsoListParagraph" style="margin-left: 21.0pt; text-indent: -21.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo1;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="font-family: Wingdings; mso-fareast-font-family: Wingdings; 
+	 mso-bidi-font-family: Wingdings;"><span style="mso-list: Ignore;">l<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">如何发布</span><span lang="EN-US" 
+															 xml:lang="EN-US">OSGB</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">格式的倾斜摄影数据？</span></p>
+<p class="MsoListParagraph" style="margin-left: 36px;"><span lang="EN-US" 
+															 xml:lang="EN-US">OSGB</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">格式的倾斜摄影数据的发布方法和步骤与</span><span 
+	 lang="EN-US" xml:lang="EN-US">3D Tiles</span><span style="font-family: 微软雅黑, sans-serif; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-hansi-font-family: Calibri; 
+														 mso-hansi-theme-font: minor-latin;">类似，只需在第</span><span 
+	 lang="EN-US" xml:lang="EN-US">2</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">步选择数据源时选择</span><span 
+	 lang="EN-US" xml:lang="EN-US">OSGB</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">即可。</span></p>
+<p>&#160;</p>
+<h2><a name="3_2_服务管理">3.2<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务管理</span></a></h2>
+<h3><a name="3_2_1_基础影像服务管理"><span style="font-weight: normal;">3.2.1<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础影像服务管理</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入服务管理页面，在左侧分类中选择图层管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础影像，即可查看已经发布的基础影像服务。列表中列出了每个基础影像服务的名称、瓦片格式、格网集、层级范围和切片状态。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击基础影像服务右侧的详情按钮，可以查看该服务的详细信息，包括服务的切片进度等。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何预览基础影像服务</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击基础影像服务右侧的预览按钮，可以地图上预览该服务。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何查看基础影像服务的服务地址</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击基础影像服务右侧的服务地址按钮，可以查看该服务的服务地址，包括</span>WMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础地址、</span>WMS GetCapabilities<span 
+	 style="font-family: 微软雅黑, sans-serif;">地址、</span>WMTS<span style="font-family: 微软雅黑, sans-serif;">基础地址、</span>WMTS 
+ GetCapabilities<span style="font-family: 微软雅黑, sans-serif;">地址和</span>TMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">地址。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何对基础影像服务进行切片</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">对于未切片的基础影像服务，点击服务右侧的更多按钮，选择切片，可以对该服务进行切片。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">以瓦片数据源发布的基础影像服务无法进行切片，如</span>GV 
+ MBTiles<span style="font-family: 微软雅黑, sans-serif;">或</span>GV HBase<span 
+	 style="font-family: 微软雅黑, sans-serif;">。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何更新基础影像服务</span></p>
+<p style="margin-left: .3pt;">GEOVIS iCenter<span style="font-family: 微软雅黑, sans-serif;">支持对基础影像服务进行局部更新，操作步骤如下：</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;">1.<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">找到要更新的基础影像服务，点击更多，在下拉列表中选择更新，进入基础影像服务更新向导。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;">2.<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">点击选择数据，在弹出的对话框中选择用来更新基础影像服务的影像数据，选择确定。点击进入下一步。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;">3.<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">设置服务参数，使用默认值即可，点击更新服务完成更新。</span></p>
+<p style="margin-left: 21.0pt;">&#160;</p>
+<h3><a name="3_2_2_影像服务管理"><span style="font-weight: normal;">3.2.2<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">影像服务管理</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入服务管理页面，在左侧分类中选择图层管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">影像，即可查看已经发布的影像服务。列表中列出了每个影像服务的名称、瓦片格式、格网集、层级范围和切片状态。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击影像服务右侧的详情按钮，可以查看该服务的详细信息，包括服务的切片进度等。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何预览影像服务</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击影像服务右侧的预览按钮，可以地图上预览该服务。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何查看影像服务的服务地址</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击影像服务右侧的服务地址按钮，可以查看该服务的服务地址，包括</span>WMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础地址、</span>WMS GetCapabilities<span 
+	 style="font-family: 微软雅黑, sans-serif;">地址、</span>WMTS<span style="font-family: 微软雅黑, sans-serif;">基础地址、</span>WMTS 
+ GetCapabilities<span style="font-family: 微软雅黑, sans-serif;">地址和</span>TMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">地址。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何对影像服务进行切片</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">对于未切片的影像服务，点击服务右侧的更多按钮，选择切片，可以对该服务进行切片。</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p style="margin-left: 21.0pt;">&#160;</p>
+<h3><a name="3_2_3_矢量服务管理"><span style="font-weight: normal;">3.2.3<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">矢量服务管理</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入服务管理页面，在左侧分类中选择图层管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">矢量，即可查看已经发布的矢量服务。</span></p>
+<p style="font-family: 微软雅黑, sans-serif; margin-left: 0px;">列表中列出了每个矢量服务的名称、瓦片格式、格网集、层级范围和切片状态。</p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击矢量服务右侧的详情按钮，可以查看该服务的详细信息，包括服务的切片进度等。</span></p>
+<p class="ListParagraph" style="margin-left: 21.3pt; text-indent: -21.0pt;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何预览矢量服务</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击矢量服务右侧的预览按钮，可以地图上预览该服务。</span></p>
+<p class="ListParagraph" style="margin-left: 21.3pt; text-indent: -21.0pt;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何查看矢量服务的服务地址</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击矢量服务右侧的服务地址按钮，可以查看该服务的服务地址，包括</span>WMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">基础地址、</span>WMS GetCapabilities<span 
+	 style="font-family: 微软雅黑, sans-serif;">地址、</span>WMTS<span style="font-family: 微软雅黑, sans-serif;">基础地址、</span>WMTS 
+ GetCapabilities<span style="font-family: 微软雅黑, sans-serif;">地址和</span>TMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">地址。</span></p>
+<p class="ListParagraph" style="margin-left: 21.3pt; text-indent: -21.0pt;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何对矢量服务进行切片</span></p>
+<p style="margin-left: 0px; font-family: 微软雅黑, sans-serif;">对于未切片的矢量服务，点击服务右侧的更多按钮，选择切片，可以对该服务进行切片。</p>
+<p style="margin-left: 0px;">&#160;</p>
+<h3><a name="3_2_4_地形服务管理"><span style="font-weight: normal;">3.2.4<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">地形服务管理</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入服务管理页面，在左侧分类中选择图层管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">地形，即可查看已经发布的地形服务。列表中列出了每个地形服务的名称、瓦片格式、格网集、层级范围和切片状态。</span></p>
+<p class="ListParagraph" style="margin-left: 21.0pt; text-indent: -21.0pt;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何预览地形服务</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击地形服务右侧的预览按钮，可以地图上预览该服务。</span></p>
+<p class="ListParagraph" style="margin-left: 21.0pt; text-indent: -21.0pt;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何查看地形服务的服务地址</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击地形服务右侧的服务地址按钮，可以查看该服务的服务地址。</span></p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<h3><a name="3_2_5_地名服务管理"><span style="font-weight: normal;">3.2.5&#160;&#160;</span><span 
+	 style="font-family: 微软雅黑, sans-serif;">地名服务管理</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入服务管理页面，在左侧分类中选择图层管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">地名，即可查看已经发布的地名服务。列表中列出了地名服务的服务地址。</span></p>
+<p style="margin-left: 0px;">&#160;</p>
+<h3><a name="3_2_6_倾斜摄影服务管理"><span style="font-weight: normal;">3.2.6<span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">倾斜摄影服务管理</span></a></h3>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">进入服务管理页面，在左侧分类中选择图层管理</span>-<span 
+	 style="font-family: 微软雅黑, sans-serif;">倾斜摄影，即可查看已经发布的倾斜摄影服务。列表中列出了每个倾斜摄影服务的名称、数据类型和创建时间。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何预览倾斜摄影服务</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击倾斜摄影服务右侧的预览按钮，可以地图上预览该服务。</span></p>
+<p class="ListParagraph" style="text-indent: 0px; margin-left: 0px;"><span 
+	 style="font-family: Wingdings;">l<span style="font: 7.0pt 'Times New Roman';">&#160;</span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">如何查看倾斜摄影服务的服务地址</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">点击倾斜摄影服务右侧的服务地址按钮，可以查看该服务的服务地址。</span></p>
+<h2><a name="3_3_服务使用">3.3<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务使用</span></a></h2>
+<p style="margin-left: 0px;">iCenter<span style="font-family: 微软雅黑, sans-serif;">通过标准化的服务来共享其管理的各种空间数据。</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">管理的空间数据及其对应的能发布的服务类型如下表所示：</span></p>
+<p>&#160;</p>
+<table style="border: none; border-collapse: separate;" cellspacing="0">
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: solid #000000 1.0px; 
+			 border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p><b><span style="font-family: 微软雅黑, sans-serif;">数据类型</span></b></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: solid #000000 1.0px; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><b><span 
+		 style="font-family: 微软雅黑, sans-serif;">支持发布的服务类型</span></b></p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><span 
+		 style="font-family: 微软雅黑, sans-serif;">基础影像</span></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p>TMS<span style="font-family: 微软雅黑, sans-serif;">、</span>WMS<span 
+		 style="font-family: 微软雅黑, sans-serif;">、</span>WMTS</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><span 
+		 style="font-family: 微软雅黑, sans-serif;">影像</span></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p>TMS<span style="font-family: 微软雅黑, sans-serif;">、</span>WMS<span 
+		 style="font-family: 微软雅黑, sans-serif;">、</span>WMTS</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><span 
+		 style="font-family: 微软雅黑, sans-serif;">矢量</span></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p>TMS<span style="font-family: 微软雅黑, sans-serif;">、</span>WMS<span 
+		 style="font-family: 微软雅黑, sans-serif;">、</span>WMTS<span style="font-family: 微软雅黑, sans-serif;">、</span>WFS</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><span 
+		 style="font-family: 微软雅黑, sans-serif;">地形</span></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p style="line-height: 200%;">Cesium Terrain</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><span 
+		 style="font-family: 微软雅黑, sans-serif;">倾斜摄影</span></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p>Cesium 3DTiles<span style="font-family: 微软雅黑, sans-serif;">、</span>OSGB</p></td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; border-left: solid #000000 1.0px; 
+			 border-right: solid #000000 1.0px; border-top: none; border-bottom: solid #000000 1.0px; 
+			 padding: 0cm 5.4pt 0cm 5.4pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;" width="284"><p><span 
+		 style="font-family: 微软雅黑, sans-serif;">地名</span></p></td>
+		<td style="vertical-align: top; border-left: none; border-right: solid #000000 1.0px; 
+			 border-top: none; border-bottom: solid #000000 1.0px; padding: 0cm 5.4pt 0cm 5.4pt; 
+			 padding-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px;" 
+			 width="284"><p style="line-height: 200%;">REST</p></td>
+	</tr>
+</table>
+<p>&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p style="margin-left: 0px;">WMTS<span style="font-family: 微软雅黑, sans-serif;">和</span>WMS<span 
+	 style="font-family: 微软雅黑, sans-serif;">是</span>OGC<span style="font-family: 微软雅黑, sans-serif;">（</span>Open 
+ Geospatial Consortium<span style="font-family: 微软雅黑, sans-serif;">）发布的地图瓦片和地图的服务标准协议。使用支持这两种标准的客户端或者按照协议规范即可使用该服务，应用广泛。</span></p>
+<p style="margin-left: 0px;">TMS<span style="font-family: 微软雅黑, sans-serif;">是</span>OSGeo<span 
+	 style="font-family: 微软雅黑, sans-serif;">（</span>OpenSource Geospatial 
+ Fundation<span style="font-family: 微软雅黑, sans-serif;">）发布的地图瓦片服务标准协议。使用支持这种标准的客户端或者按照协议规范即可使用该服务。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">应用相对来说没有</span>WMTS<span 
+	 style="font-family: 微软雅黑, sans-serif;">广泛。</span><span style="text-indent: 21.0pt; 
+															 font-family: 微软雅黑, sans-serif;">推荐使用</span><span 
+	 style="text-indent: 21.0pt;">WMTS</span><span style="text-indent: 21.0pt; 
+													 font-family: 微软雅黑, sans-serif;">服务。</span></p>
+<p style="margin-left: 0px;">WFS<span style="font-family: 微软雅黑, sans-serif;">是</span>OGC<span 
+	 style="font-family: 微软雅黑, sans-serif;">（</span>Open Geospatial Consortium<span 
+	 style="font-family: 微软雅黑, sans-serif;">）发布的要素的服务标准协议。使用支持这种标准的客户端或者按照协议规范即可使用该服务。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">通过</span>WFS<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务可以获取和查询背后的矢量数据的每个</span>Feature<span 
+	 style="font-family: 微软雅黑, sans-serif;">的具体几何和属性信息。</span></p>
+<p style="margin-left: 0px;">Cesium Terrain<span style="font-family: 微软雅黑, sans-serif;">和</span>Cesium 
+ 3DTiles<span style="font-family: 微软雅黑, sans-serif;">是按照</span>CesiumJS<span 
+	 style="font-family: 微软雅黑, sans-serif;">的数据标准组织的服务，方便</span>Cesium<span 
+	 style="font-family: 微软雅黑, sans-serif;">和基于</span>Cesium<span style="font-family: 微软雅黑, sans-serif;">内核的第三方</span>web<span 
+	 style="font-family: 微软雅黑, sans-serif;">客户端直接访问和使用</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">里管理的地形数据和倾斜摄影数据。</span></p>
+<p style="margin-left: 0px;">OSGB<span style="font-family: 微软雅黑, sans-serif;">是倾斜摄影数据的一种常用的数据格式。方便支持</span>OSGB<span 
+	 style="font-family: 微软雅黑, sans-serif;">的第三方客户端直接读取</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">中的倾斜摄影数据。</span></p>
+<p style="margin-left: 0px;">iCenter<span style="font-family: 微软雅黑, sans-serif;">内置了一套地名数据，以</span>Rest<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务的形式对外提供。</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">采用</span>Swagger<span style="font-family: 微软雅黑, sans-serif;">的形式来描述</span>REST<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务的</span>API<span style="font-family: 微软雅黑, sans-serif;">，地名服务的</span>REST 
+ API<span style="font-family: 微软雅黑, sans-serif;">说明可以访问地址：</span></p>
+<p style="margin-left: 0px;">http://{<span style="font-family: 微软雅黑, sans-serif;">地名服务</span>host}:8150<span 
+	 style="font-family: 微软雅黑, sans-serif;">。通过地名服务的接口可以根据各种空间条件查询到指定地名信息。</span></p>
+<p style="text-indent: 21.0pt;">&#160;</p>
+<h2><a name="3_4_样式表的管理和使用">3.4<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">样式表的管理和使用</span></a></h2>
+<p style="margin-left: 0px;">iCenter<span style="font-family: 微软雅黑, sans-serif;">主要支持通过</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">（</span>Styled Layer Descripter<span 
+	 style="font-family: 微软雅黑, sans-serif;">）来指定矢量数据服务化后的样式。</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">的详细规范参见（</span><a href="http://www.opengeospatial.org/standards/sld">http://www.opengeospatial.org/standards/sld</a><span 
+	 style="font-family: 微软雅黑, sans-serif;">）。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">服务管理</span>”<span style="font-family: 微软雅黑, sans-serif;">的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">样式管理</span>”<span style="font-family: 微软雅黑, sans-serif;">页面可以对</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">中所有的样式进行管理。</span></p>
+<p style="margin-left: 0px;"><b><span style="font-family: 微软雅黑, sans-serif;">如何添加样式？</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">样式表管理</span>”<span style="font-family: 微软雅黑, sans-serif;">中点击</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">添加样式表</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮可以将一个外部的</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件添加到</span>iCenter<span style="font-family: 微软雅黑, sans-serif;">中。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">通常情况下，用户可以选用第三方的桌面工具配置矢量数据的样式风格，比如</span>uDig<span 
+	 style="font-family: 微软雅黑, sans-serif;">、</span>QGIS<span style="font-family: 微软雅黑, sans-serif;">等，然后将配置好的风格导出成</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">通过该操作将导出的</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">文件添加到</span>iCenter<span style="font-family: 微软雅黑, sans-serif;">中即可在</span>iCenter<span 
+	 style="font-family: 微软雅黑, sans-serif;">中发布矢量数据的时候直接使用。</span></p>
+<p style="margin-left: 0px;"><b><span style="font-family: 微软雅黑, sans-serif;">如何编辑和预览样式？</span></b></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">在</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">样式表管理</span>”<span style="font-family: 微软雅黑, sans-serif;">页面找到需要预览和编辑的样式，点击操作区域的</span>“<span 
+	 style="font-family: 微软雅黑, sans-serif;">编辑</span>”<span style="font-family: 微软雅黑, sans-serif;">按钮，在预览图层中可以选择指定图层数据来使用当前样式进行预览。</span></p>
+<p style="margin-left: 0px;">iCenter<span style="font-family: 微软雅黑, sans-serif;">提供了样式编辑器可以直接编辑</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">文档的内容，可以支持用户方便的修改</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">中的局部内容，比如填充颜色值等。修改好可以点击“校验”按钮自动检查</span>SLD<span 
+	 style="font-family: 微软雅黑, sans-serif;">的内容语法是否正确。</span></p>
+<p style="margin-left: 0px; font-family: 微软雅黑, sans-serif;">校<span style="mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">验成功后点击“保存”，即可看到新样式的效果。</span></p>
+<p style="margin-left: 0px; font-family: 微软雅黑, sans-serif;">&#160;</p>
+<h2><a name="3_5_图层组的管理和使用">3.5<span style="font: 7.0pt 'Times New Roman';">&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">图层组的管理和使用</span></a></h2>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">图层组是把多个图层按一定顺序组合在一起的一个容器，一个图层组可以通过一个服务就将包含的各个图层数据组成的地图统一共享给应用使用。</span></p>
+<p style="margin-left: 0px;"><span style="font-family: 微软雅黑, sans-serif;">很多情况下，一幅配好的地图由多个图层组成，有固定的图层叠加顺序。如果没有图层组的能力，客户端需要通过多个服务分别访问多个图层的内容，在客户端再按指定的顺序再进行图层叠加展示。</span></p>
+<p style="font-family: 微软雅黑, sans-serif; margin-left: 0px;">使用图层组极大的简化了这一过程，减少了对服务器请求的次数，访问带宽压力，同时降低了对客户端（服务消费者）进行图层管理的要求。</p>
+<p style="font-family: 微软雅黑, sans-serif; margin-left: 0px;">&#160;</p>
+<h2 style="mso-list: l2 level2 lfo1; font-weight: bold;"><a name="3_6_数据处理" 
+															 style="font-weight: bold;">3.6&#160;&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif;">数据处理</span></a></h2>
+<p class="MsoNormal"><span lang="EN-US" xml:lang="EN-US">GEOVIS iCenter</span> 
+ <span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+		 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+		 mso-hansi-theme-font: minor-latin;">支持将瓦片类型的影像数据和地形数据发布为基础影像服务和地形服务。如果用户只有单个或多个</span><span 
+	 lang="EN-US" xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">类型的数据文件，需要先通过数据处理服务将</span><span 
+	 lang="EN-US" xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">数据处理为瓦片数据。</span></p>
+<p class="MsoListParagraph" style="mso-char-indent-count: 0; mso-list: l1 level1 lfo2; 
+	 margin-left: 0px;"><font 
+ face="Microsoft Sans Serif">●</font><span style="font: 7.0pt 'Times New Roman';">&#160;</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">&#160;如何将</span><span lang="EN-US" 
+	 xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+										 mso-ascii-font-family: Calibri; 
+										 mso-ascii-theme-font: minor-latin; 
+										 mso-hansi-font-family: Calibri; 
+										 mso-hansi-theme-font: minor-latin;">影像数据处理为瓦片</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo3;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-list: Ignore;">1.&#160;&#160;&#160;&#160;&#160;</span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">进入服务管理</span><span lang="EN-US" 
+															 xml:lang="EN-US">-</span><span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">数据处理页面，点击新建任务。</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo3;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">2.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">数据类型选择“影像数据”，数据源视情况选择“</span><span 
+	 lang="EN-US" xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">文件”或“</span><span 
+	 lang="EN-US" xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">目录”，瓦片存储选择“</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles</span><span style="font-family: 微软雅黑, sans-serif; 
+															 mso-ascii-font-family: Calibri; 
+															 mso-ascii-theme-font: minor-latin; 
+															 mso-hansi-font-family: Calibri; 
+															 mso-hansi-theme-font: minor-latin;">”；</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo3;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">3.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击选择数据，选择要处理的数据或目录；</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo3;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">4.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击选择存放位置，选择处理完成后瓦片数据的存放位置；</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo3;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">5.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击下一步设置参数，输入任务名称，其他参数使用默认值即可，</span></p>
+<p class="MsoListParagraph" style="margin-left: 18.0pt; text-indent: -18.0pt; 
+	 mso-char-indent-count: 0; mso-list: l0 level1 lfo3;"><span lang="EN-US" 
+	 xml:lang="EN-US" style="mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span 
+	 style="mso-list: Ignore;">6.<span style="font: 7.0pt 'Times New Roman';">&#160;&#160;&#160;&#160;&#160;</span></span></span>&#160;<span 
+	 style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+	 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+	 mso-hansi-theme-font: minor-latin;">点击创建任务完成创建。</span></p>
+<p class="MsoListParagraph" style="margin-left: 21.0pt; text-indent: -21.0pt; 
+	 mso-char-indent-count: 0; mso-list: l1 level1 lfo2;"><font face="Microsoft Sans Serif">●</font><span 
+	 style="font: 7.0pt 'Times New Roman';">&#160;</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">&#160;如何将</span><span 
+	 lang="EN-US" xml:lang="EN-US">TIF</span><span style="font-family: 微软雅黑, sans-serif; 
+													 mso-ascii-font-family: Calibri; 
+													 mso-ascii-theme-font: minor-latin; 
+													 mso-hansi-font-family: Calibri; 
+													 mso-hansi-theme-font: minor-latin;">地形数据处理为瓦片</span></p>
+<p class="MsoNormal"><span style="font-family: 微软雅黑, sans-serif; mso-ascii-font-family: Calibri; 
+							 mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; 
+							 mso-hansi-theme-font: minor-latin;">步骤与处理影像数据类似，只需在第</span><span 
+	 lang="EN-US" xml:lang="EN-US">2</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">步瓦片存储选择“</span><span 
+	 lang="EN-US" xml:lang="EN-US">GV MBTiles(Terrain)</span><span style="font-family: 微软雅黑, sans-serif; 
+	 mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; 
+	 mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin;">”</span><span 
+	 lang="EN-US" xml:lang="EN-US">,</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">第</span><span 
+	 lang="EN-US" xml:lang="EN-US">3</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">步选择对应的地形数据</span><span 
+	 lang="EN-US" xml:lang="EN-US">/</span><span style="font-family: 微软雅黑, sans-serif; 
+												 mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin;">目录即可。</span></p>
+<p>&#160;</p>
+</body>
+</html>

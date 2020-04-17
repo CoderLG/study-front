@@ -1,0 +1,4 @@
+(function() {
+var toc =  [ { "type" : "item", "name" : "版权与免责声明", "url" : "版权与免责声明.htm#版权与免责声明" }, { "type" : "book", "name" : "1 产品介绍与入门", "key" : "toc1", "url" : "1_产品介绍与入门.htm" }, { "type" : "book", "name" : "2 数据管理", "key" : "toc3", "url" : "2_数据管理.htm" }, { "type" : "book", "name" : "3 服务管理", "key" : "toc4", "url" : "3_服务管理.htm" }, { "type" : "book", "name" : "4 高级查询", "key" : "toc7", "url" : "4_高级查询.htm" }, { "type" : "book", "name" : "5 运维管理", "key" : "toc8", "url" : "5_运维管理.htm" }, { "type" : "item", "name" : "6 系统服务管理", "url" : "6_系统服务管理.htm" } ];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

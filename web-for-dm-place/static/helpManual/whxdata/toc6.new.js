@@ -1,0 +1,4 @@
+(function() {
+var toc =  [ { "type" : "item", "name" : "3.2.1 基础影像服务管理", "url" : "3_服务管理.htm#3_2_1_基础影像服务管理bc-9" }, { "type" : "item", "name" : "3.2.2 影像服务管理", "url" : "3_服务管理.htm#3_2_2_影像服务管理bc-10" }, { "type" : "item", "name" : "3.2.3 矢量服务管理", "url" : "3_服务管理.htm#3_2_3_矢量服务管理bc-11" }, { "type" : "item", "name" : "3.2.4 地形服务管理", "url" : "3_服务管理.htm#3_2_4_地形服务管理bc-12" }, { "type" : "item", "name" : "3.2.5 地名服务管理", "url" : "3_服务管理.htm#3_2_5_地名服务管理bc-13" }, { "type" : "item", "name" : "3.2.6 倾斜摄影服务管理", "url" : "3_服务管理.htm#3_2_6_倾斜摄影服务管理bc-14" } ];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

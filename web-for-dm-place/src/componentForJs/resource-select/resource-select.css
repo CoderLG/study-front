@@ -1,0 +1,8 @@
+.resource-select-root{
+}
+.resource-tree-radio{
+  padding-right: 10px;
+}
+.resource-tree-radio span.el-radio__label{
+  display: none;
+}

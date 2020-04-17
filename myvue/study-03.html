@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 20px;
+            border: 1px red solid;
+            width: 444px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="box">
+            <h3>v-for循环数组，对象也能循环</h3>
+            <ul>
+                <li v-for="(item,index) in items"> {{index}}.{{item}}</li>
+            </ul>
+            <button @click="insert">插入</button>
+            <button @click="remove">移除</button>
+            <h1 v-for="it in school">{{it.class[1]}}</h1>
+        </div>
+        
+
+
+        <div class="box">
+            <h3>v-model数据双向绑定</h3>
+            <input type="button" value="alertFun" @click="alertFun">
+            <input type="text" v-model="mess">
+            <h4>{{mess}}</h4>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                items: ['html','css','js','ajax'],
+                school:[
+                    {class:['zhangSan','liSi']},
+                    {class:['wangWu','zhaoLiu']},
+                    {class:['huangQi','qianBa']},
+                ] ,
+                mess: '数据双向绑定',
+
+            },
+            methods:{
+                insert: function(){
+                    this.school.push({class:['lg','lg']});
+                },
+                remove: function(){
+                    this.school.shift();
+                },
+                alertFun: function(){
+                    alert(this.mess);
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>

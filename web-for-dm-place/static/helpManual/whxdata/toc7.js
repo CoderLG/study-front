@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"4 高级查询\" url=\"4_高级查询.htm\"><item name=\"4.1 底图配置和切换\" url=\"4_高级查询.htm#4_1_底图配置和切换bc-1\" /><item name=\"4.2 影像数据查询\" url=\"4_高级查询.htm#4_2_影像查询bc-2\" /><item name=\"4.3 矢量数据查询\" url=\"4_高级查询.htm#4_3_矢量查询bc-3\" /></data>";

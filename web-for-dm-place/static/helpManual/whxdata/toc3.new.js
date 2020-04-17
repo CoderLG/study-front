@@ -1,0 +1,4 @@
+(function() {
+var toc =  [ { "type" : "item", "name" : "2.1 自定义目录", "url" : "2_数据管理.htm#2_1_自定义目录bc-1" }, { "type" : "item", "name" : "2.2 从本地上传数据", "url" : "2_数据管理.htm#2_2_从本地上传数据bc-2" }, { "type" : "item", "name" : "2.3 从服务器导入数据", "url" : "2_数据管理.htm#2_3_从服务器导入数据bc-3" }, { "type" : "item", "name" : "2.4 元信息解析、查看和编辑", "url" : "2_数据管理.htm#2_4_元信息解析、查看和编辑bc-4" }, { "type" : "item", "name" : "2.5 快速检索数据", "url" : "2_数据管理.htm#2_5_快速检索数据bc-5" }, { "type" : "item", "name" : "2.6 数据下载和发布", "url" : "2_数据管理.htm#2_6_数据下载和发布bc-6" }, { "type" : "item", "name" : "2.7 从数据找服务", "url" : "2_数据管理.htm#2_7_从数据找服务bc-7" } ];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

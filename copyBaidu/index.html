@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+		/*清除浮动，让浮动的元素撑起父级的div*/
+        .clear-fix:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+		.header-wrap{
+			background-color: black;
+			width: 100%;
+
+			position: fixed;
+			z-index: 999;
+			top: 0px;
+		}
+
+		.header-content-wrap{
+			width: 220px;		
+			margin: 0 auto;
+			padding: 15px;
+		}
+
+		.header-content{
+			background-color: white;
+			height: 20px;
+			border-radius: 10px;
+		}
+		.header-content-search{
+			display: block;
+			margin-left: 10px;
+			height: 20px;
+			width: 150px;
+			float: left;
+			
+		}
+		.header-content-button{
+			display: block;
+			background-color: yellow;
+			height: 20px;
+			width: 50px;
+			float: right;
+			border-radius: 0 10px 10px 0;
+		}
+
+		.header-submenu{
+			background-color: yellow;
+			padding: 10px;
+			margin-top: 50px;
+		}
+		.header-submenu-content{
+			/*border: 1px red solid;*/
+			width: 600px;
+			margin: 0 auto;
+		}
+		/*去掉里前面的点*/
+		li{
+			list-style: none;
+		}
+		.header-submenu-content-list > li {
+			float: left;
+			margin-left: 25px;
+
+		}
+		.header-submenu-content-list >li:hover {
+			color: red;
+		}
+
+		.myimage{
+			height: 350px;
+			width: 600px;
+			margin: 5px auto;
+
+		}
+		.image-content{
+			height: 300px;
+			width: 600px;
+			margin: 5px auto;
+		}
+		/* 让图片自适应父级大小 */
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		/*去掉超链接的下划线 设置字体颜色*/
+		a{
+			text-decoration: none;
+			color: black;
+		}
+
+		.desc{
+			margin-left: 30px;
+			/*设置字体大小，高和行高一样 可以实现字体居中*/
+			height: 50px;
+			line-height: 50px;
+			font-size: 25px;
+		}
+		/*移动鼠标，字体颜色变红，出现下划线*/
+		.desc >a:hover{
+			color: red;
+			text-decoration: underline;
+		}
+
+
+		.test-font-top{
+			width: 600px;
+			margin: 0 auto;
+		}
+
+
+		.test-font-top > .f1 {
+			display: inline-block;
+			height: 60px;
+			line-height: 60px;
+			font-size: 50px;
+			color: yellow;
+			border-bottom: 1px black solid;
+		}
+		.test-font-top .f2 {
+			display: inline-block;
+			height: 60px;
+			line-height: 60px;
+			font-size: 30px;
+			color: red;
+		}
+		.test-font-next{
+			
+			width: 600px;
+			margin: 0 auto;
+		}
+
+		/*使多行的元素到一行， 浮动 盒子模型*/
+		.test-font-next li{
+			display: flex;
+			flex-direction: row;
+			margin: 5px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.test-font-next li > span{
+			font-size: 40px;
+		}
+		.test-font-next-div{
+			margin-left: 20px;
+		}
+		.fouce{
+			background-color: red;
+		}
+		.test-font-next-div span{
+			margin-left: 40px;
+		}
+
+		.parent{
+			
+			width: 600px;
+			margin: 0 auto;
+			background-color: yellow;
+		}
+		.parent .child{
+			float: left;
+			margin: 10px;
+		}
+		.parent .child2{
+			float: right;
+			margin: 10px;
+		}
+		.parent a:hover{
+			background-color: red;
+			color: white;
+		}
+
+		.left-image{
+			height: 200px;
+			width: 200px;
+		}
+		.box{
+			border: 1px red solid;
+			width: 1000px;
+			margin: 0 auto;
+		}
+		/*设置弹性盒子模型，方向横向，可自动换行(指定内部元素的大小)*/
+		.box-ul{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.box-li{
+			display: flex;
+			flex-direction: row;
+			width: 400px;
+			margin: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="header-wrap ">
+		<div class="header-content-wrap  ">
+			<div class="header-content ">
+				<form>
+					<input class="header-content-search" type="text" name="" >
+					<input type="submit" name="" value="提交" class="header-content-button">
+			
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<nav class="header-submenu">
+		<div class="header-submenu-content clear-fix">
+			<ul class="header-submenu-content-list">
+				<li class="header-submenu-content-list-item">一部分</li>
+				<li class="header-submenu-content-list-item">er部分</li>
+				<li class="header-submenu-content-list-item">san部分</li>
+				<li class="header-submenu-content-list-item">一部分</li>
+				<li class="header-submenu-content-list-item">一部分</li>
+				<li class="header-submenu-content-list-item">一部分</li>
+				<li class="header-submenu-content-list-item">一部分</li>
+			</ul> 
+		</div>
+	</nav>
+
+	<div class="myimage">
+		<div class="image-content"><img src="img/游艇 船 水 海水.jpg"></div>
+		<div class="desc">你现在的位置： <a href="">首页</a> &gt; <a href="">看景</a> </div>
+	</div>
+
+
+	<div class="test-font-top">
+		<span class="f1">美利坚</span> <span>共计 <span class="f2">9</span>个,新增 <span class="f2">999</span> 例 </span>
+	</div>
+
+	<div class="test-font-next">
+		<ul>
+			<li> <span>大标题</span> <div class="test-font-next-div"><span class="fouce">全部</span>  <span>网游</span> <span>单机</span></div></li>
+			<li> <span>大标题</span> <div class="test-font-next-div"><span class="fouce">全部</span>  <span>网游</span> <span>单机</span></div></li>
+			<li> <span>大标题</span> <div class="test-font-next-div"><span class="fouce">全部</span>  <span>网游</span> <span>单机</span></div></li>
+			<li> <span>大标题</span> <div class="test-font-next-div"> 
+				<span class="fouce">a</span> <span>b</span> <span>c</span> <span>a</span> <span>b</span> <span>c</span>
+				
+			</div></li>
+		</ul>
+	</div>	
+
+
+	<div class="parent clear-fix">
+		<div class="child"><a href="">这是啥</a></div>
+		<div class="child"><a href="">猜猜看</a></div>
+		<div class="child2"><a href="">未来的j球</a></div>
+	</div>
+
+	<div class="box">
+		<ul class="box-ul">
+			<li class="box-li">	
+				<div class="left-image"> <img src="img/游艇 船 水 海水.jpg"></div> 
+				<div class="rigit-font">
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+				</div>
+			</li>
+
+			<li class="box-li">	
+				<div class="left-image"> <img src="img/游艇 船 水 海水.jpg"></div> 
+				<div class="rigit-font">
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+				</div>
+			</li>
+
+			<li class="box-li">	
+				<div class="left-image"> <img src="img/游艇 船 水 海水.jpg"></div> 
+				<div class="rigit-font">
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+				</div>
+			</li>
+
+			<li class="box-li">	
+				<div class="left-image"> <img src="img/游艇 船 水 海水.jpg"></div> 
+				<div class="rigit-font">
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+					<p><span>前端真棒</span> 水电费可喝咖啡打我IE哈佛暗示法华为</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+html,body,.full-container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.aside-enter-active, .aside-leave-active {
+  transition: width 1s ease;
+}
+.aside-enter, .aside-leave-to {
+  width: 0!important;
+}
+.properties-table-expand{
+  & *{
+    font-size: 0.6rem!important;
+  }
+  & label {
+    color: #99a9bf;
+  }
+  & .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    min-width: 50%;
+  }
+}
+::-webkit-scrollbar{
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
+:focus {
+  outline: -webkit-focus-ring-color auto 0;
+}
+.vue-contextmenu-listWrapper{
+  box-shadow: 0 0 8px #ccc !important;
+  & > .context-menu-list {
+    & > button{
+      background-color: #ffffff;
+      display: flex!important;
+      align-items: center;
+      &:hover{
+        background:#4281F4!important;
+      }
+    }
+  }
+}
+.cesium-widget-credits a, .cesium-widget-credits a:visited{
+  display: none;
+}

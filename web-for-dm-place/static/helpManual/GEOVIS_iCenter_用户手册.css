@@ -1,0 +1,379 @@
+﻿/*Created with Adobe RoboHelp 2015.*/
+p {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+	margin-top: 0.45cm;
+	margin-left: 18pt;
+}
+h1 {
+	margin-top: 17.0pt;
+	margin-right: 0cm;
+	margin-bottom: 16.5pt;
+	margin-left: 21.6pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -21.6pt;
+	line-height: 240%;
+	font-size: 22.0pt;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+h2 {
+	margin-top: 13.0pt;
+	margin-right: 0cm;
+	margin-bottom: 13.0pt;
+	margin-left: 28.8pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -28.8pt;
+	line-height: 173%;
+	font-size: 18.0pt;
+	font-family: "Calibri Light", sans-serif;
+	font-weight: bold;
+}
+h3 {
+	margin-top: 13.0pt;
+	margin-right: 0cm;
+	margin-bottom: 13.0pt;
+	margin-left: 36.0pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -36.0pt;
+	line-height: 173%;
+	font-size: 16.0pt;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+h4 {
+	margin-top: 14.0pt;
+	margin-right: 0cm;
+	margin-bottom: 14.5pt;
+	margin-left: 43.2pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -43.2pt;
+	line-height: 156%;
+	font-size: 15.0pt;
+	font-family: "Calibri Light", sans-serif;
+	font-weight: bold;
+}
+h5 {
+	margin-top: 14.0pt;
+	margin-right: 0cm;
+	margin-bottom: 14.5pt;
+	margin-left: 50.4pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -50.4pt;
+	line-height: 156%;
+	font-size: 14.0pt;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+h6 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.2pt;
+	margin-left: 57.6pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -57.6pt;
+	line-height: 133%;
+	font-size: 12.0pt;
+	font-family: "Calibri Light", sans-serif;
+	font-weight: bold;
+}
+p.Heading7 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.2pt;
+	margin-left: 64.8pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -64.8pt;
+	line-height: 133%;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+p.Heading8 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.2pt;
+	margin-left: 72.0pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -72.0pt;
+	line-height: 133%;
+	font-size: 12.0pt;
+	font-family: "Calibri Light", sans-serif;
+}
+p.Heading9 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 3.2pt;
+	margin-left: 79.2pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: -79.2pt;
+	line-height: 133%;
+	font-size: 12.0pt;
+	font-family: "Calibri Light", sans-serif;
+}
+p.Toc1 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.0pt;
+	margin-left: 0cm;
+	line-height: 107%;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc2 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.0pt;
+	margin-left: 11.0pt;
+	line-height: 107%;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc3 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 5.0pt;
+	margin-left: 22.0pt;
+	line-height: 107%;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc4 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 63.0pt;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc5 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 84.0pt;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc6 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 105.0pt;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc7 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 126.0pt;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc8 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 147.0pt;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Toc9 {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 168.0pt;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Header {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: center;
+	layout-grid-mode: char;
+	border: none;
+	padding: 0cm;
+	font-size: 9.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Footer {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	layout-grid-mode: char;
+	font-size: 9.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.Caption {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	line-height: 125%;
+	font-size: 12.0pt;
+	font-family: Cambria, serif;
+}
+span.Hyperlink {
+	color: #0563C1;
+	text-underline: single;
+	text-decoration: underline;
+}
+span.HyperlinkFollowed {
+	color: #954F72;
+	text-underline: single;
+	text-decoration: underline;
+}
+p.Acetate {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-size: 9.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.ListParagraph {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: 21.0pt;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+	margin-top: 32pt;
+}
+span.标题1 {
+	font-family: 微软雅黑, sans-serif;
+	font-weight: bold;
+}
+span.标题3 {
+	font-family: 微软雅黑, sans-serif;
+	font-weight: bold;
+}
+span.标题2 {
+	font-family: "Calibri Light", sans-serif;
+	font-weight: bold;
+}
+span.标题4 {
+	font-family: "Calibri Light", sans-serif;
+	font-weight: bold;
+}
+span.标题5 {
+	font-family: 微软雅黑, sans-serif;
+	font-weight: bold;
+}
+span.标题6 {
+	font-family: "Calibri Light", sans-serif;
+	font-weight: bold;
+}
+span.标题7 {
+	font-family: 微软雅黑, sans-serif;
+	font-weight: bold;
+}
+span.标题8 {
+	font-family: "Calibri Light", sans-serif;
+}
+span.标题9 {
+	font-family: "Calibri Light", sans-serif;
+}
+p.无间隔1 {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.文件大标题 {
+	margin-top: 17.0pt;
+	margin-right: 0cm;
+	margin-bottom: 16.5pt;
+	margin-left: 0cm;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	line-height: 240%;
+	font-size: 16.0pt;
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+}
+span.文件大标题 {
+	font-family: 微软雅黑, sans-serif;
+	font-weight: bold;
+}
+span.题注 {
+	font-family: Cambria, serif;
+}
+p.TOC标题1 {
+	margin-top: 12.0pt;
+	margin-right: 0cm;
+	margin-bottom: 0cm;
+	margin-left: 0cm;
+	margin-bottom: .0001pt;
+	line-height: 107%;
+	font-size: 16.0pt;
+	font-family: "Calibri Light", sans-serif;
+	color: #2E74B5;
+}
+p.列出段落1 {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: 21.0pt;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.列出段落2 {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: 21.0pt;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+p.列出段落3 {
+	margin: 0cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-indent: 21.0pt;
+	font-size: 12.0pt;
+	font-family: Calibri, sans-serif;
+}
+span.批注框文本 {
+	font-family: 微软雅黑, sans-serif;
+}
+OL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+UL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}

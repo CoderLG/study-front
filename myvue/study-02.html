@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地应用-标签</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            border: 1px red solid;
+            height: 20px;
+            width: 20px;
+        }
+        .test2{
+            margin: 20px auto;
+            height: 300px;
+            width: 300px;
+            border: 1px solid red;
+        }
+        .pre {
+            border: 1px solid black;
+           
+            float: left;
+        }
+        .next{
+            
+            border: 1px solid black;
+            float: right;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .clearFix:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- v-text后面的world不起作用，都支持字符串的拼接 -->
+        <h2 v-text="message + '!'"> world</h2>
+        <h2>{{message + '!'}} world</h2>
+
+        <!-- v-html解析html语法 -->
+        <h3 v-html="content"></h3>
+
+        <!-- 事件绑定 简写: -->
+        <input type="button" value="事件绑定" v-on:click="clickFun">
+        <input type="button" value="双击事件" @dblclick="clickFun">
+        <h2 @click="changeMess">{{message}}</h2>
+
+        <!-- v-show将内部的内容解析成boolean值 -->
+        <span  v-show="true">isShow1</span>
+        <span  v-show=isShow>isShow2</span>
+        <span  v-show="age > 17">isShow3</span>
+
+        <!-- v-if和v-show一样，v-if操作的是dom，v-show操作的display -->
+        <br>
+        <input type="button" value="显示/隐藏"  @click="showHide">
+        <span  v-if="isTrue">v-if</span>
+ 
+        <!-- v-bind为元素绑定属性 简写: -->
+        <div v-bind:class="true?'box':''">
+        </div>
+        <div :class="{box:isTrue}"></div>
+
+        <!-- 灵活运用 -->
+        <div class="test2">
+            <img :src="images[imageIndex]" alt="">
+            <div class="pre" v-show="isPre"  @click="clickPre">上一张</div>
+            <div class="next"  v-show="isNext" @click="clickNext">下一张</div>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+                content: '<a href="http://www.baidu.com">vue</a>',
+                age:18,
+                isShow: false,
+                isTrue: true,
+
+                images: ['./img/sea.jpg','./img/yingxiao.png'],
+                imageIndex: 0 ,
+                isPre: false,
+                isNext: true,
+            },
+            methods:{
+                clickFun: function(){
+                    alert('clickFun');
+                },
+                changeMess: function(){
+                    this.message += "多余的信息";
+                },
+                showHide: function(){
+                    this.isTrue = ! this.isTrue;
+                },
+                clickPre: function(){
+                    this.imageIndex--;
+                    this.isNext = !this.isNext;
+                    if (this.imageIndex == 0)
+                        this.isPre = !this.isPre;
+                },
+                clickNext: function(){
+                    this.imageIndex++;
+                    this.isPre = !this.isPre;
+                    if (this.imageIndex == (this.images.length-1))
+                        this.isNext = !this.isNext;
+                    
+                }
+            }
+        });
+    </script>
+</body>
+</html>

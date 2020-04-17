@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+    <link rel="shotcut icon" href="./images/streetView/favicon.ico">
+    <link rel="bookmark" href="./images/streetView/favicon.ico">
+    <title>StreetView</title>
+    <link rel="stylesheet" href="./css/ol.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/streetView/streetViewStyle.css" />
+    <link href="./css/streetView/minimap.css" rel="stylesheet" type="text/css" />
+	<script src="./js/openLayerV4.1.1/build/ol.js"></script>
+    <script type="text/javascript" src="./js/streetView/n.js"></script>
+    <script type="text/javascript" src="./js/streetView/m.js"></script>
+    <script src="./js/streetView/miniMap.js" type="text/javascript"></script>
+    <!-- <script src="./js/config/config-url.js" type="text/javascript"></script> -->
+
+    <style>
+        body {
+            /* set margin to 0 and overflow to hidden, to go fullscreen */
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* 返回二维地图按钮样式 */
+
+        #backmap {
+            position: absolute;
+            left: 30px;
+            top: 20px;
+            width: 50px;
+            height: 32px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: black;
+            background-image: url('./images/streetView/back.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* 放大街景显示级别按钮样式 */
+
+        #zoomInDiv {
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: #fff;
+            border: 1px solid #999;
+            border-color: rgba(0, 0, 0, 0.4);
+            border-radius: 3px;
+            background-image: url('./images/streetView/zoomInLevel.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* 缩小街景显示级别按钮样式 */
+
+        #zoomOutDiv {
+            position: absolute;
+            left: 30px;
+            top: 75px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: #fff;
+            border: 1px solid #999;
+            border-color: rgba(0, 0, 0, 0.4);
+            border-radius: 3px;
+            background-image: url('./images/streetView/zoomOutLevel.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zoomInDiv" title="放大一级" onclick="panoZoomIn()"></div>
+    <div id="zoomOutDiv" title="缩小一级" onclick="panoZoomOut()"></div>
+    <div id="WebGL-output" style="z-index: 1;position: absolute;">
+    </div>
+
+    <!-- 遮盖用iframe层，定位和大小必须与被遮盖的DIV层一样，Z-Index必须比被遮盖的DIV层低！-->
+    <div id="converIframe" style="position:absolute;z-index:1;right:0px;bottom:0px;width:100px;height:40px; display: none;">
+        <iframe frameborder="0" scrolling="no" style="width:100%;height:100%;"></iframe>
+    </div>
+    <div id="streetMapContainer" style="width: 100%; height: 100%; float: left;">
+
+        <div id="streetMap" style="width: 100%; height: 100%; bottom: 0px; z-index: -1">
+        </div>
+    </div>
+    <div id="minimapContainerDiv" class="miniMap">
+        <div class="yy" id="minimapAreaDiv">
+            <div id="btnmin" title="点击隐藏/显示" style="position: absolute; right: 0px; bottom: 0px; width: 17px; height: 17px; cursor: pointer; z-index: 1000; background-image: url('./images/streetView/bg/overview_control.png'); background-position: 0px -60px;"></div>
+            <div id="arcgisMap" style="width: 100%; height: 100%;">
+            </div>
+            <div id="baidu" style="width:100%;height:100%;"></div>
+            <div id="ocn" style="width:100%;height:100%;display:none;"></div>
+        </div>
+
+        <div id="OMap_stdMpZoom" class="OMap_stdMpZoom" style="display:none;">
+            <div class="OMap_button OMap_stdMpZoomIn" title="放大一级" onclick="zoomIn()">
+                <div class="OMap_smcbg"></div>
+            </div>
+            <div class="OMap_button OMap_stdMpZoomOut" title="缩小一级" onclick="zoomOut()">
+                <div class="OMap_smcbg"></div>
+            </div>
+        </div>
+
+    </div>    
+</body>
+</html>

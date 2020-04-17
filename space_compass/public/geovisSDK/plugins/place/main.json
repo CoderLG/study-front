@@ -1,0 +1,10 @@
+{
+  "name": "Place",
+  "path": "./Place.js",
+  "js": "Place",
+  "time": "2018/8/23",
+  "author": "中科星图",
+  "version": "V1.0",
+  "description": "工具描述",
+  "icon": "./aaa.png"
+}

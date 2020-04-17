@@ -1,0 +1,222 @@
+div,ul,ol,li,th,h1 {
+    margin:0;
+    padding:0;
+}
+
+ol,ul {
+    list-style:none;
+}
+
+#WebGL-output{
+    /* background-image: url(images/background.jpg); */
+    background-size: 1050px,675px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 0;
+}
+
+div#toolbar {
+    display: none;
+    position: fixed; /* set fixed position for the bar */
+    top: 0px;
+    left: 0px;
+    z-index: 9999; /* keep the bar on top  */
+    width: 36px;
+    /* CSS3 */
+    -moz-border-radius-bottomleft: 8px;
+    -khtml-border-radius-bottomleft: 8px;
+    -webkit-border-top-right-radius: 16px;
+    -moz-border-radius-bottomright: 8px;
+    -khtml-border-radius-bottomright: 8px;
+    -webkit-border-bottom-right-radius: 16px;
+    -moz-box-shadow: 0px 1px 10px #666, inset 1px 1px 0px #a4a4a4; /* inset creates a inner-shadow */
+    -khtml-box-shadow: 0px 1px 10px #666;
+    -webkit-box-shadow: 0px 1px 10px #666;
+    /* CSS3 end */
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+
+}
+
+div#toolbar {
+    height: 210px;
+    min-height: 100px; /* to limit the width when an excessive window resize */
+    margin: 0px auto; /* centered toolbar */
+    left: 0px;
+    top:100px;
+}
+
+.button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+    text-decoration: none;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+.bigrounded {
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+.medium {
+    font-size: 12px;
+    padding: .4em 1.5em .42em;
+}
+.small {
+    font-size: 11px;
+    padding: .2em 1em .275em;
+}
+
+/* white */
+.white {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.white:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.white:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+
+ul#social li {
+    display: inline;
+}
+
+a.markerQuery, a.measureDistance,a.autoRun, a.measureArea, a.showModel, a.about, a.clear {
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-right: 1px;
+    margin-top:5px;
+}
+
+a.markerQuery:hover, a.autoRun:hover,a.measureDistance:hover, a.measureArea:hover, a.showModel:hover, a.about:hover, a.clear:hover {
+    background-position: 1px 1px; /* simple css hover effect */
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+a.markerQuery {
+    background: url(images/markerQuery.png) no-repeat;
+    background-size: 33px 33px;
+}
+
+a.measureDistance {
+    background: url(images/distanceMeasure.png) no-repeat;
+    background-size: 33px 33px;
+}
+a.autoRun {
+    background: url(images/autoRun.png) no-repeat;
+    background-size: 33px 33px;
+}
+/*a.measureArea {*/
+/*background: url(images/areaMeasure.png) no-repeat;*/
+/*background-size: 33px 33px;*/
+/*}*/
+
+a.showModel {
+    background: url(images/modelManage.png) no-repeat;
+    background-size: 33px 33px;
+}
+
+a.about {
+    background: url(images/about.png) no-repeat;
+    background-size: 33px 33px;
+}
+
+/*a.clear {*/
+/*background: url(images/blank.gif) no-repeat;*/
+/*background-size: 33px 33px;*/
+/*}*/
+
+.tip {
+    float: left;
+    top:-33px;
+    min-width: 40px;
+
+    display: none;
+    border:1px solid #F9F9F9;
+    position: relative;
+    background-color:#323432;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    left: 42px;
+}
+
+.tip:before,.tip:after{
+    content: "";
+    display: block;
+    border-width:6px;
+    position: absolute;
+    bottom:6px;
+    left:-13px;
+    border-style:dashed solid dashed dashed;
+    border-color: transparent #F9F9F9 transparent transparent;
+    font-size: 0;
+    line-height:0;
+    text-align: center;
+}
+.tip:after{
+    left: -12px;
+    border-color: transparent #323432 transparent transparent ;
+}
+
+/* custom distances for the icons */
+#tipMarkerQuery {
+
+}
+
+.tip ul{
+    padding: 1px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
